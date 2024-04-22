@@ -3,3 +3,56 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+#news-items-template{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.news-item {
+    padding: 2rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    
+}
+
+.news-item img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+#news-details {
+    padding: 20px;
+}

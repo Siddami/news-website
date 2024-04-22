@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Details</title>
+</head>
+<body>
+    <section id="news-details" class="hidden">
+            <h2 id="title">{{ title }}</h2>
+            <img src="{{ image }}" alt="{{ title }}">
+            <p>{{ content }}</p>
+            <button id="btn">View</button>
+
+            <h3>Comments</h3>
+            <ul id="comments-list">
+                </ul>
+
+            <h4>Add Comment</h4>
+            <form id="add-comment-form">
+                <textarea name="comment" id="new-comment" rows="5" placeholder="Enter your comment"></textarea>
+                <button type="submit">Submit Comment</button>
+            </form>
+
+            <form id="edit-comment-form" class="hidden">
+                <input type="hidden" name="commentId">
+                <textarea name="comment" id="edit-comment" rows="5"></textarea>
+                <button type="submit">Update Comment</button>
+                <button type="button" id="delete-comment">Delete</button>
+            </form>
+
+            <button id="back-to-list">Back to List</button>
+        </section>
+        <script src="./details.js"></script>
+        <script src="./data.js"></script>
+</body>
+</html>
