@@ -1,5 +1,3 @@
-import { fetchData } from "./data";
-
 const commentsList = document.getElementById('comments-list');
 const addCommentForm = document.getElementById('add-comment-form');
 const editCommentForm = document.getElementById('edit-comment-form');
@@ -24,7 +22,7 @@ function displayNewsDetails() {
       commentItem.addEventListener('click', () => {
         // Pre-fill edit form with comment text
         editCommentForm.commentId.value = comment.id;
-        editCommentForm.edit-comment.value = comment.text;
+        editCommentForm.editcomment.value = comment.text;
         switchToEditForm();
       });
 
@@ -57,7 +55,7 @@ editCommentForm.addEventListener('submit', async (event) => {
   event.preventDefault();
 
   const commentId = editCommentForm.commentId.value;
-  const editedCommentText = editCommentForm.edit-comment.value;
+  const editedCommentText = editCommentForm.editcomment.value;
 
   // Assuming you have a function to send the edited comment data to the server (replace with your actual logic)
   const response = await editComment(commentId, editedCommentText);  // Replace with your actual editComment function
@@ -65,7 +63,7 @@ editCommentForm.addEventListener('submit', async (event) => {
   if (response.ok) {
     // Clear comment input and fetch updated comments
     editCommentForm.commentId.value = '';
-    editCommentForm.edit-comment.value = '';
+    editCommentForm.editcomment.value = '';
     switchToAddForm();
     displayNewsDetails(news);  // Replace with your logic to fetch updated news
   } else {
@@ -84,7 +82,7 @@ deleteCommentButton.addEventListener('click', async () => {
   if (response.ok) {
     // Clear comment input and fetch updated comments
     editCommentForm.commentId.value = '';
-    editCommentForm.edit-comment.value = '';
+    editCommentForm.editcomment.value = '';
     switchToAddForm();
     displayNewsDetails(news);  // Replace with your logic to fetch updated news
   } else {
